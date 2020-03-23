@@ -21,10 +21,10 @@ const groupSchema = new Schema({
         type : name,
         required : true
     },
-    user : {
+    users : [{
         type : Schema.Types.ObjectId,
         ref : 'User'
-    },
+    }],
     post : [postSchema]
 },{
     timestamps : true,
