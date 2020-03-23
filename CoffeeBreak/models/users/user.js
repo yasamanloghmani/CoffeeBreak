@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const coffeeSchema = new Schema({
     size : {
-        type : [1, 2, 3],
+        type : [Number],
         required : true,
     },
     price : {
