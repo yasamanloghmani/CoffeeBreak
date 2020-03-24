@@ -5,7 +5,8 @@ const users_list = [
     {
         name : "John",
         limitOfExpense : 10 ,
-        limitOfCoffee : 3
+        limitOfCoffee : 3,
+    
     },
     {
         name : "Mark",

@@ -1,5 +1,5 @@
-const Group = require('../../models/groups/group');
-const User = require('../../models/users/user');
+const Group = require('../../models/group');
+const User = require('../../models/user');
 module.exports = {
     create,
     index,
