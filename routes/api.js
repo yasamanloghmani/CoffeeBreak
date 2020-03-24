@@ -13,7 +13,7 @@ router.delete('/users/:id', userCtrl.deleteOne);
 router.put('/groups/:groupId/join', userCtrl.joinGroup)
 router.post('/users/:id/coffees', userCtrl.createCoffee)
 router.get('/users/:id/coffees', userCtrl.allCoffees)
-
+router.get('/coffees/:coffeeId', userCtrl.showCoffee)
 //groups routes
 router.get('/groups', groupctrl.index);
 router.post('/groups', groupctrl.create);

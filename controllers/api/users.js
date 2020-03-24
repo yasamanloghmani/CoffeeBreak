@@ -9,7 +9,8 @@ module.exports = {
     deleteOne,
     joinGroup,
     createCoffee,
-    allCoffees
+    allCoffees,
+    showCoffee
 };
 
 
@@ -125,4 +126,15 @@ function allCoffees(req, res) {
        coffees = user.coffees;
       res.json(coffees);
     });
+}
+
+
+
+function showCoffee(req, res){
+  User.coffees.findById(req.params.coffeeId)
+  .exec((err , coffee) => {
+    if (err) { 
+    console.log("index error: " + err); }
+    res.json(coffee);
+  })
 }
