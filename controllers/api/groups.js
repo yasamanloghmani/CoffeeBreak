@@ -9,7 +9,8 @@ module.exports = {
     createPost,
     updatePost,
     deletePost,
-    allPosts
+    allPosts,
+    showPost
 };
 
 
@@ -121,4 +122,14 @@ function allPosts(req, res) {
       posts = group.post;
       res.json(posts);
     });
+}
+
+
+function showPost(req, res){
+  Group.findById(req.params.id).exec((err, group) =>
+    {
+      var subDoc = group.post.id(req.params.postId);
+      res.json(subDoc);
+    }
+  )
 }

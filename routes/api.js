@@ -24,7 +24,7 @@ router.post('/groups/:id/posts', groupctrl.createPost)
 router.put('/groups/:id/posts/:postId', groupctrl.updatePost)
 router.delete('/groups/:id/posts/:postId', groupctrl.deletePost)
 router.get('/groups/:id/posts', groupctrl.allPosts);
-
+router.get('/groups/:id/posts/:postId', groupctrl.showPost)
 
 
 
