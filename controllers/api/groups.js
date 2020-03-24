@@ -1,12 +1,13 @@
 const Group = require('../../models/group');
-const User = require('../../models/user');
+//const User = require('../../models/user');
 module.exports = {
     create,
     index,
     show,
     update,
     deleteOne,
-    createPost
+    createPost,
+    updatePost
 };
 
 
@@ -75,3 +76,16 @@ function createPost(req, res){
     })
   })
 }
+
+
+function updatePost(req, res) {
+  Post = Group.post.find({});
+  Post.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .populate('user')
+      .exec((err, post)=>{
+        if (err) { 
+        console.log("index error: " + err); }
+        console.log(post)
+        res.json(post);
+    })
+  }
