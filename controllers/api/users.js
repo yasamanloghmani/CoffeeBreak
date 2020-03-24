@@ -8,7 +8,8 @@ module.exports = {
     update,
     deleteOne,
     joinGroup,
-    createCoffee
+    createCoffee,
+    allCoffees
 };
 
 
@@ -112,4 +113,16 @@ function createCoffee(req, res){
       res.json(updatedUser);
     })
   })
+}
+
+
+function allCoffees(req, res) {
+  User.findById(req.params.id)
+  .populate('group')
+  .exec((err , user) => {
+      if (err) { 
+      console.log("index error: " + err); }
+       coffees = user.coffees;
+      res.json(coffees);
+    });
 }

@@ -12,6 +12,7 @@ router.put('/users/:id', userCtrl.update);
 router.delete('/users/:id', userCtrl.deleteOne);
 router.put('/groups/:groupId/join', userCtrl.joinGroup)
 router.post('/users/:id/coffees', userCtrl.createCoffee)
+router.get('/users/:id/coffees', userCtrl.allCoffees)
 
 //groups routes
 router.get('/groups', groupctrl.index);

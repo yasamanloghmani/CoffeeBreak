@@ -36,7 +36,7 @@ const userSchema = new Schema({
         type : Number,
         required : true,
     },
-    coffee : [coffeeSchema],
+    coffees : [coffeeSchema],
     groups : [{
         type : Schema.Types.ObjectId,
         ref : 'Group'
