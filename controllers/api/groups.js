@@ -5,8 +5,7 @@ module.exports = {
     index,
     show,
     update,
-    deleteOne,
-    addGroupToUser
+    deleteOne
 };
 
 
