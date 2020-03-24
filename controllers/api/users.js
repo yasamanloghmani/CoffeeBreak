@@ -7,7 +7,8 @@ module.exports = {
     show,
     update,
     deleteOne,
-    joinGroup
+    joinGroup,
+    createCoffee
 };
 
 
@@ -100,4 +101,15 @@ function joinGroup(req, res){
           })
         }
       )
+}
+
+function createCoffee(req, res){
+  User.findById(req.params.id)
+  .populate('group')
+  .exec((err , user) => {
+    user.coffee.push(req.body);
+    user.save((err , updatedUser) => {
+      res.json(updatedUser);
+    })
+  })
 }

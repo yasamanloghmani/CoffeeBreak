@@ -17,25 +17,6 @@ function create(req, res) {
   });
 }
 
-
-
-function addGroupToUser(req, res) {
-  User.findById(req.params.id, function(err, user) {
-    user.groups.push(req.body.groupsId);
-    user.save((err, user)=>{
-      if (err) {
-        console.log("create error: " + err);
-      }
-      console.log("created ", user.groups);
-      res.json(user);
-
-    })
-  })
-}
-
-
-
-
 //get all users
 function index(req, res) {
   Group.find()
