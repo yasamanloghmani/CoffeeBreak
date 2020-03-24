@@ -7,7 +7,8 @@ module.exports = {
     update,
     deleteOne,
     createPost,
-    updatePost
+    updatePost,
+    deletePost
 };
 
 
@@ -83,6 +84,21 @@ function updatePost(req, res) {
     {
       var subDoc = group.post.id(req.params.postId);
       subDoc.set(req.body);
+      group.save((err, updatedgroup) => {
+        if (err) { 
+          console.log("index error: " + err); }
+        res.json(updatedgroup)
+
+      })
+    }
+  )
+}
+
+function deletePost(req, res) {
+  Group.findById(req.params.id).exec((err, group) =>
+    {
+      var subDoc = group.post.id(req.params.postId);
+      subDoc.remove();
       group.save((err, updatedgroup) => {
         if (err) { 
           console.log("index error: " + err); }

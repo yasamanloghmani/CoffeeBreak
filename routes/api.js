@@ -22,5 +22,11 @@ router.put('/groups/:id', groupctrl.update);
 router.delete('/groups/:id', groupctrl.deleteOne);
 router.post('/groups/:id/posts', groupctrl.createPost)
 router.put('/groups/:id/posts/:postId', groupctrl.updatePost)
+router.delete('/groups/:id/posts/:postId', groupctrl.deletePost)
+
+
+
+
+
 module.exports = router;
 
