@@ -5,7 +5,8 @@ module.exports = {
     index,
     show,
     update,
-    deleteOne
+    deleteOne,
+    createPost
 };
 
 
@@ -60,5 +61,17 @@ Group.findByIdAndDelete(req.params.id)
          console.log("index error: " + err); }
       console.log(group)
       res.json(group);
+  })
+}
+
+
+function createPost(req, res){
+  groups.findById(req.params.id)
+  .populate('user')
+  .exec((err , group) => {
+    group.post.push(req.body);
+    group.save((err , updatedgroup) => {
+      res.json(updatedgroup);
+    })
   })
 }
