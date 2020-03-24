@@ -63,31 +63,41 @@ function deleteOne(req, res) {
   })
 }
 
+
+
+// req.user.id
 function joinGroup(req, res){
-  const userId = req.params.userId;
-  console.log(userId);
+ // const userId = req.params.userId ;
   Group.findById(req.params.groupId)
-      .exec((err, user, group) => {
-        console.log(groupId)
+  .populate("user")
+      .exec((err, group) => {
         if(err){
            console.log("index error: " + err);
         }
-        user.groups.push(groupId);
-        group.users.push(userId);
-        user.save((err, user)=>{
+        console.log(req.body.userId)
+        group.users.push(req.body.userId);
+        console.log(group);
+        group.save((err, updatedGroup)=>{
           if (err) {
             console.log("create error: " + err);
           }
-          console.log("created ", user.groups);
-          res.json(user);
-        })
-        group.save((err, user)=>{
-          if (err) {
-            console.log("create error: " + err);
-          }
-          console.log("created ", user.groups);
-          res.json(group);
+          res.json(updatedGroup);
         })
       })
-
+      User.findById(req.body.userId)
+      .populate('group')
+      .exec(
+        (err, user) => {
+          if(err){
+             console.log("index error: " + err);
+          }
+          user.groups.push(req.params.groupId);
+          user.save((err, updatedUser)=>{
+            if (err) {
+              console.log("create error: " + err);
+            }
+            res.json(updatedUser);
+          })
+        }
+      )
 }
