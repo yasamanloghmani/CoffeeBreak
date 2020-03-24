@@ -1,4 +1,6 @@
-const db = require('./models');
+const User = require('./models/user');
+const Group = require('./models/group');
+require('./config/database')
 const users_list = [
     {
         name : "John",
@@ -52,9 +54,9 @@ const groups_list = [
 ];
 
 
-db.Group.deleteMany({}, (err, authors)=> {
+Group.deleteMany({}, (err, authors)=> {
     console.log('removed all Groups');
-    db.Group.create(groups_list, (err, groups)=>{
+    Group.create(groups_list, (err, groups)=>{
       if (err) {
         console.log(err);
         return;
@@ -63,17 +65,17 @@ db.Group.deleteMany({}, (err, authors)=> {
       console.log(`created ${groups.length} groups`);
   
   
-      db.User.deleteMany({}, (err)=>{
+      User.deleteMany({}, (err)=>{
         console.log('removed all users');
         users_list.forEach((userData)=> {
-          const user = new db.User({
+          const user = new User({
             name : userData.name,
             limitOfExpense : userData.limitOfExpense ,
             limitOfCoffee : userData.limitOfCoffee
           })
         });
       });
-      db.User.create(users_list, (err, users) => {
+      User.create(users_list, (err, users) => {
         if (err) {
             console.log(err);
             return;
