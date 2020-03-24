@@ -8,7 +8,8 @@ module.exports = {
     deleteOne,
     createPost,
     updatePost,
-    deletePost
+    deletePost,
+    allPosts
 };
 
 
@@ -107,4 +108,17 @@ function deletePost(req, res) {
       })
     }
   )
+}
+
+
+
+function allPosts(req, res) {
+  Group.findById(req.params.id)
+  .populate('user')
+  .exec((err , group) => {
+      if (err) { 
+      console.log("index error: " + err); }
+      posts = group.post;
+      res.json(posts);
+    });
 }
