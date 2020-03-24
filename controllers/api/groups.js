@@ -66,7 +66,7 @@ Group.findByIdAndDelete(req.params.id)
 
 
 function createPost(req, res){
-  groups.findById(req.params.id)
+  Group.findById(req.params.id)
   .populate('user')
   .exec((err , group) => {
     group.post.push(req.body);
