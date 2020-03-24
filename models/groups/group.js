@@ -18,7 +18,7 @@ const postSchema = new Schema({
 })
 const groupSchema = new Schema({
     name : {
-        type : name,
+        type : String,
         required : true
     },
     users : [{

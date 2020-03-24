@@ -37,10 +37,10 @@ const userSchema = new Schema({
         required : true,
     },
     coffee : [coffeeSchema],
-    group : {
+    groups : [{
         type : Schema.Types.ObjectId,
         ref : 'Group'
-    }
+    }]
 
 },{
     timestamps : true,
