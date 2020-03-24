@@ -108,7 +108,7 @@ function createCoffee(req, res){
   User.findById(req.params.id)
   .populate('group')
   .exec((err , user) => {
-    user.coffee.push(req.body);
+    user.coffees.push(req.body);
     user.save((err , updatedUser) => {
       res.json(updatedUser);
     })
