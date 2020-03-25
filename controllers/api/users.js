@@ -15,7 +15,7 @@ module.exports = {
 
 function create(req, res) {
     User.create(req.body).then(function(user) {
-      res.status(201).json(user);
+      res.status(200).json(user);
     });
 }
 //get all users

@@ -2,7 +2,71 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+.navbar {
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.bg-light {
+  background-color: #e9e8f7!important;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255, 119, 0);
+  font-size: 20px;
+}
 
-a {
-  color: #00B7FF;
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:active {
+  color: rgb(15, 7, 97);
+}
+.list-group li{
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+li {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+  border : 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px #b6b6b8;
+  font-size: 18px;
+}
+ul li .badge {
+  color : white;
+  padding: 7px;
+  width: 80px;
+  height: 28px;
+  margin-right: 10px;
+  font-size: 14px;
+  opacity: 70%;
+}
+
+p , h6{
+  padding: 0px;
+  margin: auto 10px;
+}
+
+p {
+  font-size: 15px;
+}
+h6 {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.card {
+  background-color: #e9e8f7;
+  margin-bottom: 30px;
+  padding-right: 20px;
+  border-radius: 10px;
+
+}
+h3.badge {
+  color: rgb(15, 7, 97);
+  font-size: 20px;
+  text-align: left;
+  padding : 20px;
 }
