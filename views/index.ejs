@@ -78,14 +78,80 @@
             </div>
           </div>
         </div>
-        
         <div>
           <li class="border-primary alert-primary">
             <span class="badge bg-primary">GET</span>
             <h6>/users/:id</h6>
             <p>Find one user by Id</p>
           </li>
-          <div class="examples"></div>
+          <div class="examples">
+            <div>
+              <p>
+                Users data can be retrieved using the API.
+              </p>
+              <span class="font alert-info">
+                http://coffeebreak-app.herokuapp.com/api/users/5e7a576fa481a7dc69f8aca3
+              </span>
+              <span class="font">
+                <br>
+                <br>
+                #parameters { <br>
+                  &nbsp;"user_id" : (unique)(5e7a576fa481a7dc69f8aca3)<br>
+                }
+              </span>
+            </div>
+            <div>
+              <span>#sample response </span>
+              <span class="font">
+                {<br>
+                  &nbsp;&nbsp;"groups": [<br>
+                  &nbsp;&nbsp;&nbsp;{<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"users": [<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"5e7a576fa481a7dc69f8aca3"<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;],<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"_id": "5e7a576fa481a7dc69f8ac9c",<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"name": "Coffee lovers",<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"post": [<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "_id": "5e7a78c5d96feb001709c83a",<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "user": "5e7a576fa481a7dc69f8aca3",<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "content": "Research Showing Harmful Effects of Caffeine.",<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "createdAt": "2020-03-24T21:16:53.522Z",<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "updatedAt": "2020-03-24T21:16:53.522Z"<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;],<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;"createdAt": "2020-03-24T18:54:39.465Z",<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;"updatedAt": "2020-03-24T21:16:53.523Z",<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;"__v": 4<br>
+                      &nbsp;&nbsp;&nbsp;}<br>
+                      &nbsp;&nbsp;],<br>
+                      &nbsp;&nbsp;"_id": "5e7a576fa481a7dc69f8aca3",<br>
+                      &nbsp;&nbsp;"name": "Rose",<br>
+                      &nbsp;&nbsp;"limitOfExpense": 5,<br>
+                      &nbsp;&nbsp;"limitOfCoffee": 2,<br>
+                      &nbsp;&nbsp;"coffees": [<br>
+                      &nbsp;&nbsp;&nbsp;{<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"_id": "5e7a594649b6fa0017552a79",<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"size": 2,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"price": 2.19,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"createdAt": "2020-03-24T19:02:30.505Z",<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"updatedAt": "2020-03-24T19:02:30.505Z"<br>
+                        &nbsp;&nbsp;&nbsp;},<br>
+                        &nbsp;&nbsp;&nbsp;{<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp; "_id": "5e7a597849b6fa0017552a7a",<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;"size": 1,<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;"price": 1.99,<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;"createdAt": "2020-03-24T19:03:20.652Z",<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;"updatedAt": "2020-03-24T19:03:20.652Z"<br>
+                          &nbsp;&nbsp;&nbsp;}<br>
+                          &nbsp;&nbsp;],<br>
+                          &nbsp;&nbsp;"createdAt": "2020-03-24T18:54:39.619Z",<br>
+                          &nbsp;&nbsp;"updatedAt": "2020-03-24T19:03:20.653Z",<br>
+                          &nbsp;&nbsp;"__v": 3<br>
+                }<br>
+              </span>
+            </div>
+          </div>
         </div>
         <div>
           <li class="border-success alert-success">
@@ -93,7 +159,39 @@
             <h6>/users</h6>
             <p>Creat new user</p>
           </li>
-          <div class="examples"></div>
+          <div class="examples">
+            <div>
+              <p>Users can be created through the API by passing in these parameters</p>
+              <p class="font">- name</p>
+              <p class="font">- limitOfExpense</p>
+              <p class="font">- limitOfCoffee</p>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/users</span><br>
+              <br><span>+ Body Request :</span><br><br>
+              <span class="font">
+                {<br>
+                  &nbsp;"name" : "Yasaman",<br>
+	                &nbsp;"limitOfExpense" : "10",<br>
+                  &nbsp;"limitOfCoffee" : "3"<br>
+                }
+              </span>
+            </div>
+            <div>
+              <span>#sample response </span><br>
+              <span class="font">
+                {<br>
+                  &nbsp;"groups": [],<br>
+                  &nbsp;"_id": "5e7b76550aa60e0017e8321e",<br>
+                  &nbsp;"name": "Yasaman",<br>
+                  &nbsp;"limitOfExpense": 10,<br>
+                  &nbsp;"limitOfCoffee": 3,<br>
+                  &nbsp;"coffees": [],<br>
+                  &nbsp;"createdAt": "2020-03-25T15:18:45.385Z",<br>
+                  &nbsp;"updatedAt": "2020-03-25T15:18:45.385Z",<br>
+                  &nbsp;"__v": 0<br>
+              }<br>
+              </span>
+            </div>
+          </div>
         </div>
         <div>
           <li class="border-warning alert-warning">
@@ -101,7 +199,36 @@
             <h6>/users/:id</h6>
             <p>Update user</p>
           </li>
-          <div class="examples"></div>
+          <div class="examples">
+            <div>
+              <p>Users can be updated through the API by passing in these parameters.</p>
+              <p>Note: parameters are the same as <span class="alert-danger">create</span> above</p>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/users/5e7b76550aa60e0017e8321e</span><br>
+              <br><span>+ Body Request :</span><br><br>
+              <span class="font">
+                {<br>
+	                &nbsp;"limitOfExpense" : "8",<br>
+                  &nbsp;"limitOfCoffee" : "2"<br>
+                }
+              </span>
+            </div>
+            <div>
+              <span>#sample response </span><br>
+              <span class="font">
+                {<br>
+                  &nbsp;"groups": [],<br>
+                  &nbsp;"_id": "5e7b76550aa60e0017e8321e",<br>
+                  &nbsp;"name": "Yasaman",<br>
+                  &nbsp;"limitOfExpense": 8,<br>
+                  &nbsp;"limitOfCoffee": 2,<br>
+                  &nbsp;"coffees": [],<br>
+                  &nbsp;"createdAt": "2020-03-25T15:18:45.385Z",<br>
+                  &nbsp;"updatedAt": "2020-03-25T15:26:47.623Z",<br>
+                  &nbsp;"__v": 0<br>
+              }<br>
+              </span>
+            </div>
+          </div>
         </div>
        <div>
         <li class="border-danger alert-danger">
@@ -109,7 +236,23 @@
           <h6>/users/:id</h6>
           <p>Delete user</p>
         </li>
-        <div class="examples"></div>
+        <div class="examples">
+          <div>
+            <p>
+              Deletes a user permanentely from the system.
+            </p>
+            <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/users/5e7b76550aa60e0017e8321e</span><br>
+
+          </div>
+          <div>
+            <span class="font">
+              #sample response<br>
+              {<br>
+                &nbsp;"message" : "success"<br>
+              }<br>
+            </span>
+          </div>
+        </div>
        </div>
        <div>
         <li class="border-primary alert-primary">
@@ -117,7 +260,40 @@
           <h6>/users/:id/coffees</h6>
           <p>Show all coffees of user</p>
         </li>
-        <div class="examples"></div>
+        <div class="examples">
+          <div>
+            <p>Get all the coffees of the unique user in the system.
+              <br>Returns a JSON array.
+            </p>
+            <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/users/5e7a576fa481a7dc69f8aca3/coffees</span><br><br>
+            <span class="font">
+              #parameters {
+                "user_id" : (unique)(5e7a576fa481a7dc69f8aca3)
+               }
+            </span>
+          </div>
+          <div>
+            <span class="font">#sample response</span><br>
+            <span class="font">
+              [<br>
+              &nbsp;{<br>
+                &nbsp; &nbsp;"_id": "5e7a594649b6fa0017552a79",<br>
+                &nbsp;&nbsp;"size": 2,<br>
+                &nbsp;&nbsp;"price": 2.19,<br>
+                &nbsp;&nbsp;"createdAt": "2020-03-24T19:02:30.505Z",<br>
+                &nbsp;&nbsp;"updatedAt": "2020-03-24T19:02:30.505Z"<br>
+                &nbsp;},<br>
+                &nbsp;{<br>
+                  &nbsp;&nbsp;"_id": "5e7a597849b6fa0017552a7a",<br>
+                  &nbsp;&nbsp;"size": 1,<br>
+                  &nbsp;&nbsp;"price": 1.99,<br>
+                  &nbsp;&nbsp;"createdAt": "2020-03-24T19:03:20.652Z",<br>
+                  &nbsp;&nbsp;"updatedAt": "2020-03-24T19:03:20.652Z"<br>
+                  &nbsp;}<br>
+              ]<br>
+            </span>
+          </div>
+        </div>
        </div>
         <div>
           <li class="border-success alert-success">
@@ -126,7 +302,21 @@
             <p>Creat coffee</p>
   
           </li>
-          <div class="examples"></div>
+          <div class="examples">
+            <div>
+              <p>Coffees can be created through the API by passing in these parameters</p>
+              <p class="font">- Size</p>
+              <p class="font">- Price</p>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/users</span><br>
+              <br><span>+ Body Request :</span><br><br>
+              <span class="font">
+                {<br>
+                  &nbsp;"size" : "2",<br>
+	                &nbsp;"price" : "2.34",<br>
+                }
+              </span>
+            </div>
+          </div>
         </div>
         <div> 
           <li class="border-warning alert-warning">
@@ -136,8 +326,7 @@
           </li>
           <div class="examples"></div>
         </div>
-       
-      </ul>
+     </ul>
     </div>
     <div id="groups" class="card">
       <h3 class="badge">

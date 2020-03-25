@@ -89,8 +89,10 @@ ul>div {
   margin-bottom: 10px;
 }
 .examples>div{
-  width: 600px;
+  width: 800px;
   float: left;
+  height: 500px;
+  overflow: scroll;
   border-left: 1px solid rgb(27, 27, 27);
   /* box-shadow: 0.7px 0px 0px rgba(255,255,255,.17); */
   box-shadow: -0.7px 0px 0px rgba(255,255,255,.17);
