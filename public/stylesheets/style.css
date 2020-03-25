@@ -28,11 +28,12 @@ li {
   border : 1px solid;
   border-radius: 5px;
   padding: 5px;
-  margin-bottom: 10px;
   align-items: center;
   cursor: pointer;
   box-shadow: 1px 1px 2px #b6b6b8;
   font-size: 18px;
+  z-index: 10;
+  clear: both;
 }
 ul li .badge {
   color : white;
@@ -44,9 +45,10 @@ ul li .badge {
   opacity: 70%;
 }
 
-p , h6{
+li>p , li>h6{
   padding: 0px;
   margin: auto 10px;
+  color: rgb(15, 7, 97);
 }
 
 p {
@@ -55,6 +57,7 @@ p {
 h6 {
   font-size: 21px;
   font-weight: 500;
+  font-family: monospace;
 }
 
 .card {
@@ -69,4 +72,35 @@ h3.badge {
   font-size: 20px;
   text-align: left;
   padding : 20px;
+}
+
+.examples{
+  /* display: none; */
+  background-color: #333;
+  overflow: scroll;
+  margin:0px 5px 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  border-top: none;
+  box-shadow: inset 0 1px rgba(255,255,255,.17);
+  color: white;
+}
+ul>div {
+  margin-bottom: 10px;
+}
+.examples>div{
+  width: 600px;
+  float: left;
+  border-left: 1px solid rgb(27, 27, 27);
+  /* box-shadow: 0.7px 0px 0px rgba(255,255,255,.17); */
+  box-shadow: -0.7px 0px 0px rgba(255,255,255,.17);
+  border-bottom: none;
+  margin: 5px;
+ padding: 10px;
+}
+.font {
+  font-family: "Consolas";
+}
+.alert-info{
+  font-size: 18px;
 }

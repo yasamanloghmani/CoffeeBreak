@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link href="//db.onlinewebfonts.com/c/1db29588408eadbd4406aae9238555eb?family=Consolas" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
@@ -23,46 +24,119 @@
         Users
       </h3>
       <ul>
-        <li class="border-primary alert-primary">
-          <span class="badge bg-primary">GET</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-primary alert-primary">
-          <span class="badge bg-primary">GET</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-success alert-success">
-          <span class="badge bg-success">POST</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-warning alert-warning">
-          <span class="badge bg-warning">PUT</span>
-          <h6></h6>
-          <p></p>
-        </li>
+        <div>
+          <li class="border-primary alert-primary">
+            <span class="badge bg-primary">GET</span>
+            <h6>/users</h6>
+            <p>Index all users</p>
+          </li>
+          <div class="examples" id="all_users">
+            <div>
+              <p>
+                Get all the users in the system.<br>Returns a JSON array.
+              </p>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/users</span>
+            </div>
+            <div>
+              <span>#sample response </span>
+              <span class="font">
+                <br>
+                 [<br>
+                 &nbsp;&nbsp;{<br>
+                  &nbsp;&nbsp;&nbsp;"groups": [<br>
+                  <br>
+                  &nbsp;&nbsp;&nbsp;],<br>
+                  &nbsp;&nbsp;&nbsp;"_id": "5e7a576fa481a7dc69f8aca5",<br>
+                  &nbsp;&nbsp;&nbsp;"name": "Ana",<br>
+                  &nbsp;&nbsp;&nbsp;"limitOfExpense": 8,<br>
+                  &nbsp;&nbsp;&nbsp;"limitOfCoffee": 2,<br>
+                  &nbsp;&nbsp;&nbsp;"coffees": [<br>
+                  <br>
+                  &nbsp;&nbsp;&nbsp;],<br>
+                  &nbsp;&nbsp;&nbsp;"createdAt": "2020-03-24T18:54:39.619Z",<br>
+                  &nbsp;&nbsp;&nbsp;"updatedAt": "2020-03-24T18:54:39.619Z",<br>
+                  "__v": 0<br>
+                  &nbsp;&nbsp;},<br>
+                  &nbsp;&nbsp;{<br>
+                    &nbsp;&nbsp;&nbsp;"groups": [<br>
+                  <br>
+                  &nbsp;&nbsp;&nbsp;],<br>
+                  &nbsp;&nbsp;&nbsp;"_id": "5e7a576fa481a7dc69f8aca6",<br>
+                  &nbsp;&nbsp;&nbsp;"name": "Bob",<br>
+                  &nbsp;&nbsp;&nbsp;"limitOfExpense": 15,<br>
+                  &nbsp;&nbsp;&nbsp;"limitOfCoffee": 5,<br>
+                  &nbsp;&nbsp;&nbsp;"coffees": [<br>
+                  <br>
+                  &nbsp;&nbsp;&nbsp;],<br>
+                  &nbsp;&nbsp;&nbsp;"createdAt": "2020-03-24T18:54:39.619Z",<br>
+                  &nbsp;&nbsp;&nbsp;"updatedAt": "2020-03-24T18:54:39.619Z",<br>
+                  &nbsp;&nbsp;&nbsp;"__v": 0<br>
+                  &nbsp;&nbsp;}<br>
+                  &nbsp;&nbsp;... <br>
+              ]<br>
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <li class="border-primary alert-primary">
+            <span class="badge bg-primary">GET</span>
+            <h6>/users/:id</h6>
+            <p>Find one user by Id</p>
+          </li>
+          <div class="examples"></div>
+        </div>
+        <div>
+          <li class="border-success alert-success">
+            <span class="badge bg-success">POST</span>
+            <h6>/users</h6>
+            <p>Creat new user</p>
+          </li>
+          <div class="examples"></div>
+        </div>
+        <div>
+          <li class="border-warning alert-warning">
+            <span class="badge bg-warning">PUT</span>
+            <h6>/users/:id</h6>
+            <p>Update user</p>
+          </li>
+          <div class="examples"></div>
+        </div>
+       <div>
         <li class="border-danger alert-danger">
           <span class="badge bg-danger">DELETE</span>
-          <h6></h6>
-          <p></p>
+          <h6>/users/:id</h6>
+          <p>Delete user</p>
         </li>
+        <div class="examples"></div>
+       </div>
+       <div>
         <li class="border-primary alert-primary">
           <span class="badge bg-primary ">GET</span>
-          <h6></h6>
-          <p></p>
+          <h6>/users/:id/coffees</h6>
+          <p>Show all coffees of user</p>
         </li>
-        <li class="border-success alert-success">
-          <span class="badge bg-success">POST</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-warning alert-warning">
-          <span class="badge bg-warning">PUT</span>
-          <h6></h6>
-          <p></p>
-        </li>
+        <div class="examples"></div>
+       </div>
+        <div>
+          <li class="border-success alert-success">
+            <span class="badge bg-success">POST</span>
+            <h6>/users/:id/coffees</h6>
+            <p>Creat coffee</p>
+  
+          </li>
+          <div class="examples"></div>
+        </div>
+        <div> 
+          <li class="border-warning alert-warning">
+            <span class="badge bg-warning">PUT</span>
+            <h6>/groups/:groupId/join</h6>
+            <p>User join a group</p>
+          </li>
+          <div class="examples"></div>
+        </div>
+       
       </ul>
     </div>
     <div id="groups" class="card">
@@ -70,56 +144,87 @@
         Groups
       </h3>
       <ul>
-        <li class="border-primary alert-primary">
-          <span class="badge bg-primary">GET</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-primary alert-primary">
-          <span class="badge bg-primary">GET</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-success alert-success">
-          <span class="badge bg-success">POST</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-warning alert-warning">
-          <span class="badge bg-warning">PUT</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-danger alert-danger">
-          <span class="badge bg-danger">DELETE</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-primary alert-primary">
-          <span class="badge bg-primary">GET</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-primary alert-primary">
-          <span class="badge bg-primary">GET</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-success alert-success">
-          <span class="badge bg-success">POST</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-warning alert-warning">
-          <span class="badge bg-warning">PUT</span>
-          <h6></h6>
-          <p></p>
-        </li>
-        <li class="border-danger alert-danger">
-          <span class="badge bg-danger">DELETE</span>
-          <h6></h6>
-          <p></p>
-        </li>
+        <div>
+          <li class="border-primary alert-primary">
+            <span class="badge bg-primary">GET</span>
+            <h6>/groups</h6>
+            <p>Index all groups</p>
+          </li>
+          <div class="examples"></div>
+        </div>
+        <div>
+          <li class="border-primary alert-primary">
+            <span class="badge bg-primary">GET</span>
+            <h6>/groups/:id</h6>
+            <p>Find group by Id</p>
+          </li>
+          <div class="examples"></div>
+        </div>
+        <div>
+          <li class="border-success alert-success">
+            <span class="badge bg-success">POST</span>
+            <h6>/groups</h6>
+            <p>Creat new group</p>
+          </li>
+          <div class="examples"></div>
+        </div>       
+        <div>
+          <li class="border-warning alert-warning">
+            <span class="badge bg-warning">PUT</span>
+            <h6>/groups/:id</h6>
+            <p>Update group</p>
+          </li>
+          <div class="examples"></div>
+        </div>        
+        <div>
+          <li class="border-danger alert-danger">
+            <span class="badge bg-danger">DELETE</span>
+            <h6>/groups/:id</h6>
+            <p>Delete group</p>
+          </li>
+          <div class="examples"></div>
+        </div>       
+        <div>
+          <li class="border-primary alert-primary">
+            <span class="badge bg-primary">GET</span>
+            <h6>/groups/:id/posts</h6>
+            <p>Show all posts of group </p>
+          </li>
+          <div class="examples"></div>
+        </div>        
+        <div>
+          <li class="border-primary alert-primary">
+            <span class="badge bg-primary">GET</span>
+            <h6>/groups/:id/posts/:postId</h6>
+            <p>Find a post of the group by Id</p>
+          </li>
+          <div class="examples"></div>
+        </div>       
+        <div>
+          <li class="border-success alert-success">
+            <span class="badge bg-success">POST</span>
+            <h6>/groups/:id/posts</h6>
+            <p>Creat new post</p>
+          </li>
+          <div class="examples"></div>
+        </div>      
+        <div>
+          <li class="border-warning alert-warning">
+            <span class="badge bg-warning">PUT</span>
+            <h6>/groups/:id/posts/:postId</h6>
+            <p>Update yhe content of the post</p>
+          </li>
+          <div class="examples"></div>
+        </div>      
+        <div>
+          <li class="border-danger alert-danger">
+            <span class="badge bg-danger">DELETE</span>
+            <h6>/groups/:id/posts/:postId</h6>
+            <p>Delete a post</p>
+          </li>
+          <div class="examples"></div>
+        </div>
+        
       </ul>
     </div>
   </body>
