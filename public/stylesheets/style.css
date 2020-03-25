@@ -43,6 +43,7 @@ ul li .badge {
   margin-right: 10px;
   font-size: 14px;
   opacity: 70%;
+
 }
 
 li>p , li>h6{
@@ -75,7 +76,7 @@ h3.badge {
 }
 
 .examples{
-  /* display: none; */
+  display: none;
   background-color: #333;
   overflow: scroll;
   margin:0px 5px 5px 10px;
@@ -105,4 +106,10 @@ ul>div {
 }
 .alert-info{
   font-size: 18px;
+}
+
+li>img {
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
 }

@@ -66,8 +66,6 @@ function deleteOne(req, res) {
 }
 
 
-
-// req.user.id
 function joinGroup(req, res){
  // const userId = req.params.userId ;
   Group.findById(req.params.groupId)

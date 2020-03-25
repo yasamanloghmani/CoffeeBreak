@@ -3,8 +3,10 @@
   <head>
     <title><%= title %></title>
     <link href="//db.onlinewebfonts.com/c/1db29588408eadbd4406aae9238555eb?family=Consolas" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script defer src="/javascripts/main.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -14,8 +16,9 @@
       <a class="navbar-brand" href="#">CoffeeBreak API</a>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="#">Users<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Groups</a>
+          <a class="nav-item nav-link" href="#users">Users</a>
+          <a class="nav-item nav-link" href="#groups">Groups</a>
+          <a class="nav-item nav-link" href="#groups">Models</a>
         </div>
       </div>
     </nav>
@@ -25,12 +28,13 @@
       </h3>
       <ul>
         <div>
-          <li class="border-primary alert-primary">
+          <li class="border-primary alert-primary" id="li-users">
             <span class="badge bg-primary">GET</span>
             <h6>/users</h6>
             <p>Index all users</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples" id="all_users">
+          <div class="examples" id="div-users">
             <div>
               <p>
                 Get all the users in the system.<br>Returns a JSON array.
@@ -79,12 +83,13 @@
           </div>
         </div>
         <div>
-          <li class="border-primary alert-primary">
+          <li class="border-primary alert-primary" id="li-one-user">
             <span class="badge bg-primary">GET</span>
             <h6>/users/:id</h6>
             <p>Find one user by Id</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples">
+          <div class="examples" id="div-one-user">
             <div>
               <p>
                 Users data can be retrieved using the API.
@@ -154,12 +159,13 @@
           </div>
         </div>
         <div>
-          <li class="border-success alert-success">
+          <li class="border-success alert-success" id="li-create-user">
             <span class="badge bg-success">POST</span>
             <h6>/users</h6>
-            <p>Creat new user</p>
+            <p>Create new user</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples">
+          <div class="examples" id="div-create-user">
             <div>
               <p>Users can be created through the API by passing in these parameters</p>
               <p class="font">- name</p>
@@ -194,12 +200,13 @@
           </div>
         </div>
         <div>
-          <li class="border-warning alert-warning">
+          <li class="border-warning alert-warning" id="li-update-user">
             <span class="badge bg-warning">PUT</span>
             <h6>/users/:id</h6>
             <p>Update user</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples">
+          <div class="examples" id="div-update-user">
             <div>
               <p>Users can be updated through the API by passing in these parameters.</p>
               <p>Note: parameters are the same as <span class="alert-danger">create</span> above</p>
@@ -231,12 +238,13 @@
           </div>
         </div>
        <div>
-        <li class="border-danger alert-danger">
+        <li class="border-danger alert-danger" id="li-delete-user">
           <span class="badge bg-danger">DELETE</span>
           <h6>/users/:id</h6>
           <p>Delete user</p>
+          <img src="/images/baseline_unfold_more_black_18dp.png">
         </li>
-        <div class="examples">
+        <div class="examples" id="div-delete-user">
           <div>
             <p>
               Deletes a user permanentely from the system.
@@ -255,12 +263,13 @@
         </div>
        </div>
        <div>
-        <li class="border-primary alert-primary">
+        <li class="border-primary alert-primary" id="li-coffees">
           <span class="badge bg-primary ">GET</span>
           <h6>/users/:id/coffees</h6>
           <p>Show all coffees of user</p>
+          <img src="/images/baseline_unfold_more_black_18dp.png">
         </li>
-        <div class="examples">
+        <div class="examples" id="div-coffees">
           <div>
             <p>Get all the coffees of the unique user in the system.
               <br>Returns a JSON array.
@@ -296,18 +305,18 @@
         </div>
        </div>
         <div>
-          <li class="border-success alert-success">
+          <li class="border-success alert-success" id="li-create-coffee">
             <span class="badge bg-success">POST</span>
             <h6>/users/:id/coffees</h6>
             <p>Creat coffee</p>
-  
+            <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples">
+          <div class="examples" id="div-create-coffee">
             <div>
               <p>Coffees can be created through the API by passing in these parameters</p>
               <p class="font">- Size</p>
               <p class="font">- Price</p>
-              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/users</span><br>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/users/5e7a576fa481a7dc69f8aca6/coffees</span><br>
               <br><span>+ Body Request :</span><br><br>
               <span class="font">
                 {<br>
@@ -316,15 +325,100 @@
                 }
               </span>
             </div>
+            <div>
+              <span class="font">
+                #sample response
+              </span>
+              <span class="font">
+                {<br>
+                  &nbsp;"groups": [],<br>
+                  &nbsp;"_id": "5e7a576fa481a7dc69f8aca6",<br>
+                  &nbsp;"name": "Bob",<br>
+                  &nbsp;"limitOfExpense": 15,<br>
+                  &nbsp;"limitOfCoffee": 5,<br>
+                  &nbsp;"coffees": [<br>
+                  &nbsp;&nbsp;{<br>
+                    &nbsp;&nbsp;&nbsp;"_id": "5e7ba9096f41ba0017e604bc",<br>
+                    &nbsp;&nbsp;&nbsp;"size": 2,<br>
+                    &nbsp;&nbsp;&nbsp;"price": 2.34,<br>
+                    &nbsp;&nbsp;&nbsp;"createdAt": "2020-03-25T18:55:05.300Z",<br>
+                    &nbsp;&nbsp;&nbsp;"updatedAt": "2020-03-25T18:55:05.300Z"<br>
+                    &nbsp;&nbsp;}<br>
+                    &nbsp;],<br>
+                    &nbsp;"createdAt": "2020-03-24T18:54:39.619Z",<br>
+                    &nbsp;"updatedAt": "2020-03-25T18:55:05.300Z",<br>
+                    &nbsp;"__v": 1<br>
+              }<br>
+              </span>
+            </div>
           </div>
         </div>
         <div> 
-          <li class="border-warning alert-warning">
+          <li class="border-warning alert-warning" id="li-join">
             <span class="badge bg-warning">PUT</span>
             <h6>/groups/:groupId/join</h6>
             <p>User join a group</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples"></div>
+          <div class="examples" id="div-join">
+            <div>
+              <p>User can join a group.
+              </p>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/groups/5e7a576fa481a7dc69f8ac9d/join</span><br><br>
+              <span class="font">
+                + Body Request <br>
+                {<br>
+                  &nbsp;"userId" : "5e7a576fa481a7dc69f8aca4"<br>
+                }<br>
+              </span>
+            </div>
+            <div>
+              <span class="font">
+                ####### Group<br>
+                {<br>
+                  &nbsp;"users": [<br>
+                  &nbsp;&nbsp;"5e7a576fa481a7dc69f8aca4"<br>
+                  &nbsp;],<br>
+                  &nbsp;"_id": "5e7a576fa481a7dc69f8ac9d",<br>
+                  &nbsp;"name": "Water",<br>
+                  &nbsp;"post": [],<br>
+                  &nbsp;"createdAt": "2020-03-24T18:54:39.466Z",<br>
+                  &nbsp;"updatedAt": "2020-03-25T19:08:37.913Z",<br>
+                  &nbsp;"__v": 1<br>
+              }<br><br>
+              </span>
+              <span class="font">
+                ####### User<br>
+                {<br>
+                  &nbsp;"groups": [<br>
+                  &nbsp;&nbsp;{<br>
+                    &nbsp;&nbsp;&nbsp;"users": [<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"5e7a576fa481a7dc69f8aca4"<br>
+                    &nbsp;&nbsp;&nbsp;],<br>
+                    &nbsp;&nbsp;&nbsp;"_id": "5e7a576fa481a7dc69f8ac9d",<br>
+                    &nbsp;&nbsp;&nbsp;"name": "Water",<br>
+                    &nbsp;&nbsp;&nbsp;"post": [<br>
+                      <br>
+                      &nbsp;&nbsp;&nbsp;],<br>
+                      &nbsp;&nbsp;&nbsp;"createdAt": "2020-03-24T18:54:39.466Z",<br>
+                      &nbsp;&nbsp;&nbsp;"updatedAt": "2020-03-25T19:08:37.913Z",<br>
+                      &nbsp;&nbsp;&nbsp;"__v": 1<br>
+                      &nbsp;&nbsp;}<br>
+                      &nbsp;],<br>
+                      &nbsp;"_id": "5e7a576fa481a7dc69f8aca4",<br>
+                      &nbsp;"name": "Niki",<br>
+                      &nbsp;"limitOfExpense": 10,<br>
+                      &nbsp;"limitOfCoffee": 2,<br>
+                      &nbsp;"coffees": [<br>
+                  <br>
+                  &nbsp;],<br>
+                  &nbsp;"createdAt": "2020-03-24T18:54:39.619Z",<br>
+                  &nbsp;"updatedAt": "2020-03-25T19:08:37.938Z",<br>
+                  &nbsp;"__v": 1<br>
+                }<br>
+              </span>
+            </div>
+          </div>
         </div>
      </ul>
     </div>
@@ -334,84 +428,94 @@
       </h3>
       <ul>
         <div>
-          <li class="border-primary alert-primary">
+          <li class="border-primary alert-primary" id="li-groups">
             <span class="badge bg-primary">GET</span>
             <h6>/groups</h6>
             <p>Index all groups</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples"></div>
+          <div class="examples" id="div-groups"></div>
         </div>
         <div>
-          <li class="border-primary alert-primary">
+          <li class="border-primary alert-primary" id="li-one-group">
             <span class="badge bg-primary">GET</span>
             <h6>/groups/:id</h6>
             <p>Find group by Id</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples"></div>
+          <div class="examples" id="div-one-group"></div>
         </div>
         <div>
-          <li class="border-success alert-success">
+          <li class="border-success alert-success" id="li-create-group">
             <span class="badge bg-success">POST</span>
             <h6>/groups</h6>
             <p>Creat new group</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples"></div>
+          <div class="examples" id="div-create-group"></div>
         </div>       
         <div>
-          <li class="border-warning alert-warning">
+          <li class="border-warning alert-warning" id="li-update-group">
             <span class="badge bg-warning">PUT</span>
             <h6>/groups/:id</h6>
             <p>Update group</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples"></div>
+          <div class="examples" id="div-update-group"></div>
         </div>        
         <div>
-          <li class="border-danger alert-danger">
+          <li class="border-danger alert-danger" id="li-delete-group">
             <span class="badge bg-danger">DELETE</span>
             <h6>/groups/:id</h6>
             <p>Delete group</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples"></div>
+          <div class="examples" id="div-delete-group"></div>
         </div>       
         <div>
-          <li class="border-primary alert-primary">
+          <li class="border-primary alert-primary" id="li-posts">
             <span class="badge bg-primary">GET</span>
             <h6>/groups/:id/posts</h6>
             <p>Show all posts of group </p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples"></div>
+          <div class="examples" id="div-posts"></div>
         </div>        
         <div>
-          <li class="border-primary alert-primary">
+          <li class="border-primary alert-primary" id="li-one-post">
             <span class="badge bg-primary">GET</span>
             <h6>/groups/:id/posts/:postId</h6>
             <p>Find a post of the group by Id</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples"></div>
+          <div class="examples" id="div-one-post"></div>
         </div>       
         <div>
-          <li class="border-success alert-success">
+          <li class="border-success alert-success" id="li-create-post">
             <span class="badge bg-success">POST</span>
             <h6>/groups/:id/posts</h6>
-            <p>Creat new post</p>
+            <p>Create new post</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples"></div>
+          <div class="examples" id="div-create-post"></div>
         </div>      
         <div>
-          <li class="border-warning alert-warning">
+          <li class="border-warning alert-warning" id="li-update-post">
             <span class="badge bg-warning">PUT</span>
             <h6>/groups/:id/posts/:postId</h6>
-            <p>Update yhe content of the post</p>
+            <p>Update the content of the post</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples"></div>
+          <div class="examples" id="div-update-post"></div>
         </div>      
         <div>
-          <li class="border-danger alert-danger">
+          <li class="border-danger alert-danger" id="li-delete-post">
             <span class="badge bg-danger">DELETE</span>
             <h6>/groups/:id/posts/:postId</h6>
             <p>Delete a post</p>
+            <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples"></div>
+          <div class="examples" id="div-delete-post"></div>
         </div>
         
       </ul>
