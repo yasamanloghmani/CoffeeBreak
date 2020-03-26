@@ -793,11 +793,69 @@
         
       </ul>
     </div>
-    <div id="models" class="card">
+    <div id="models-card">
       <h3 class="badge">
         <img src="/images/icons8-big-data-50.png">
         Models
       </h3>
+      <div id="models">
+        <div class="model">
+          <h4 class="badge">User Model</h4>
+          <div>
+            <span class="font">
+              {<br>
+                &nbsp;&nbsp;name<span class="red-flag">*</span> : String,<br>
+                &nbsp;&nbsp;picture : String,<br>
+                &nbsp;&nbsp;expense :  : Number,<br>
+                &nbsp;&nbsp;limitOfExpense<span class="red-flag">*</span> : Number,<br>
+                &nbsp;&nbsp;numberOfCoffee : Number,<br>
+                &nbsp;&nbsp;limitOfCoffee<span class="red-flag">*</span> : Number,<br>
+                &nbsp;&nbsp;coffees : [coffeeSchema],<br>
+                &nbsp;&nbsp;groups : [Schema.Types.ObjectId]<br>
+              }<br>
+            </span>
+          </div>
+          
+        </div>
+        <div class="model">
+          <h4 class="badge">Coffee Model</h4>
+          <div>
+            <span class="font">
+              {<br>
+               &nbsp;&nbsp;size<span class="red-flag">*</span> : Number,<br>
+               &nbsp;&nbsp;price<span class="red-flag">*</span> : Number<br>
+              }<br>
+            </span>
+          </div>
+          
+        </div>
+        <div class="model">
+          <h4 class="badge">Group Model</h4>
+          <div>
+            <span class="font">
+              {<br>
+                &nbsp;&nbsp;name<span class="red-flag">*</span> : String,<br>
+                &nbsp;&nbsp;users : [Schema.Types.ObjectId],<br>
+                &nbsp;&nbsp;post : [postSchema]<br>
+              }<br>
+            </span>
+          </div>
+        </div>
+        <div class="model">
+          <h4 class="badge">post Model</h4>
+          <div>
+            <span class="font">
+              {<br>
+                &nbsp;&nbsp;user<span class="red-flag">*</span> : [Schema.Types.ObjectId],<br>
+                &nbsp;&nbsp;content :  String,<br>
+                &nbsp;&nbsp;picture :  String,<br>
+              }<br>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+
     </div>
   </body>
 </html>

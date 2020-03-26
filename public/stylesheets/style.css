@@ -68,9 +68,15 @@ h6 {
   border-radius: 10px;
 
 }
+
 h3.badge {
   color: rgb(15, 7, 97);
   font-size: 20px;
+  text-align: left;
+  padding : 20px;
+}
+h4.badge {
+  font-size: 17px;
   text-align: left;
   padding : 20px;
 }
@@ -99,7 +105,7 @@ ul>div {
   box-shadow: -0.7px 0px 0px rgba(255,255,255,.17);
   border-bottom: none;
   margin: 5px;
- padding: 10px;
+  padding: 10px;
 }
 .font {
   font-family: "Consolas";
@@ -123,4 +129,28 @@ h3>img{
   font-size: 17px;
   padding: 0px 30px 10px 30px;
   line-height: 1.8;
+}
+.model{
+  width: 24%;
+  margin: 10px;
+  border-left: 1px solid #bdbcd5;
+  box-shadow: -0.5px 0px 0px rgba(0, 0, 0, 0.17);
+}
+
+#models{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#models-card{
+  background-color: #e9e8f7;
+  margin-bottom: 30px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+.red-flag{
+  color: red;
+}
+.model>div{
+  margin-left: 20px;
 }
