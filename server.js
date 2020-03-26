@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var favicon = require('serve-favicon')
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -13,6 +14,7 @@ var indexRouter = require('./routes/index');
 var apiRouter = require('./routes/api');
 
 var app = express();
+app.use(favicon(path.join(__dirname, 'public','images', 'favicon.ico')))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,6 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use( express.static( "public" ) );
+
 
 app.use('/api', indexRouter);
 app.use('/api', apiRouter);
