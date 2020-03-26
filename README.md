@@ -53,5 +53,5 @@
 * Access [CoffeeBreak](http://coffeebreak-app.herokuapp.com/api/)
 
 
-<img width="20%" height="40%" alt="Getting Started" src="./public/images/IMG_5483.png"><img width="40%" height="50%" alt="Getting Started" src="./public/images/IMG_5484.png">
-<img width="20%" height="40%" alt="Getting Started" src="./public/images/Screen Shot 2020-03-26 at 6.05.52 PM.png"><img width="20%" height="40%" alt="Getting Started" src="./public/images/Screen Shot 2020-03-26 at 6.05.52 PM.png">
+<img width="40%" height="50%" alt="Getting Started" src="./public/images/IMG_5483.png"><img width="40%" height="50%" alt="Getting Started" src="./public/images/IMG_5484.png">
+<img width="40%" height="50%" alt="Getting Started" src="./public/images/Screen Shot 2020-03-26 at 6.05.52 PM.png"><img width="40%" height="50%" alt="Getting Started" src="./public/images/Screen Shot 2020-03-26 at 6.05.52 PM.png">
