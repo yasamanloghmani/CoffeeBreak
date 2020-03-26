@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-
 const postSchema = new Schema({
     user : {
         type : Schema.Types.ObjectId,
@@ -16,6 +15,7 @@ const postSchema = new Schema({
 },{
     timestamps : true
 })
+
 const groupSchema = new Schema({
     name : {
         type : String,
@@ -29,8 +29,6 @@ const groupSchema = new Schema({
 },{
     timestamps : true,
 })
-
-
 
 module.exports = mongoose.model('Group', groupSchema);
 

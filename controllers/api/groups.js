@@ -1,16 +1,16 @@
 const Group = require('../../models/group');
 //const User = require('../../models/user');
 module.exports = {
-    create,
-    index,
-    show,
-    update,
-    deleteOne,
-    createPost,
-    updatePost,
-    deletePost,
-    allPosts,
-    showPost
+  create,
+  index,
+  show,
+  update,
+  deleteOne,
+  createPost,
+  updatePost,
+  deletePost,
+  allPosts,
+  showPost
 };
 
 
@@ -21,7 +21,6 @@ function create(req, res) {
   });
 }
 
-//get all users
 function index(req, res) {
   Group.find()
     .populate('user')
@@ -33,7 +32,6 @@ function index(req, res) {
     });
 }
 
-//show each user
 function show(req, res) {
 Group.findById(req.params.id)
   .populate('user')
@@ -44,7 +42,6 @@ Group.findById(req.params.id)
       res.json(group);
     })
 }
-
 
 function update(req, res) {
 Group.findByIdAndUpdate(req.params.id, req.body, {new: true})
@@ -68,7 +65,6 @@ Group.findByIdAndDelete(req.params.id)
   })
 }
 
-
 function createPost(req, res){
   Group.findById(req.params.id)
   .populate('user')
@@ -79,7 +75,6 @@ function createPost(req, res){
     })
   })
 }
-
 
 function updatePost(req, res) {
   Group.findById(req.params.id).exec((err, group) =>
@@ -111,8 +106,6 @@ function deletePost(req, res) {
   )
 }
 
-
-
 function allPosts(req, res) {
   Group.findById(req.params.id)
   .populate('user')
@@ -123,7 +116,6 @@ function allPosts(req, res) {
       res.json(posts);
     });
 }
-
 
 function showPost(req, res){
   Group.findById(req.params.id).exec((err, group) =>

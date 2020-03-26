@@ -52,19 +52,3 @@ let createPost = displayExample('li-create-post') ;
 createPost('div-create-post');
 let deletePost = displayExample('li-delete-post') ;
 deletePost('div-delete-post');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

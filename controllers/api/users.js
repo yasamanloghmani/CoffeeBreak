@@ -2,35 +2,34 @@ const User = require('../../models/user');
 const Group = require('../../models/group');
 
 module.exports = {
-    create,
-    index,
-    show,
-    update,
-    deleteOne,
-    joinGroup,
-    createCoffee,
-    allCoffees
+  create,
+  index,
+  show,
+  update,
+  deleteOne,
+  joinGroup,
+  createCoffee,
+  allCoffees
 };
-
 
 function create(req, res) {
     User.create(req.body).then(function(user) {
       res.status(200).json(user);
     });
 }
-//get all users
+
 function index(req, res) {
     User.find()
       .populate('groups')
         .exec((err, users)=>{
         if (err) { 
-          console.log("index error: " + err); }
+          console.log("index error: " + err);
+        }
         console.log(users)
         res.json(users);
       });
   }
   
-//show each user
 function show(req, res) {
   User.findById(req.params.id)
     .populate('groups')
@@ -67,7 +66,6 @@ function deleteOne(req, res) {
 
 
 function joinGroup(req, res){
- // const userId = req.params.userId ;
   Group.findById(req.params.groupId)
   .populate("user")
       .exec((err, group) => {

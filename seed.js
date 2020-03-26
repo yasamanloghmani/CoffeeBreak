@@ -58,31 +58,29 @@ const groups_list = [
 Group.deleteMany({}, (err, authors)=> {
     console.log('removed all Groups');
     Group.create(groups_list, (err, groups)=>{
-      if (err) {
-        console.log(err);
-        return;
-      }
-      console.log('recreated all Groups');
-      console.log(`created ${groups.length} groups`);
-  
-  
-      User.deleteMany({}, (err)=>{
-        console.log('removed all users');
-        users_list.forEach((userData)=> {
-          const user = new User({
-            name : userData.name,
-            limitOfExpense : userData.limitOfExpense ,
-            limitOfCoffee : userData.limitOfCoffee
-          })
+        if (err) {
+            console.log(err);
+            return;
+        }
+        console.log('recreated all Groups');
+        console.log(`created ${groups.length} groups`);
+        User.deleteMany({}, (err)=>{
+            console.log('removed all users');
+            users_list.forEach((userData)=> {
+            const user = new User({
+                name : userData.name,
+                limitOfExpense : userData.limitOfExpense ,
+                limitOfCoffee : userData.limitOfCoffee
+            })
+            });
         });
-      });
       User.create(users_list, (err, users) => {
         if (err) {
             console.log(err);
             return;
-          }
-          console.log('recreated all Users');
-          console.log(`created ${users.length} users`);
+        }
+        console.log('recreated all Users');
+        console.log(`created ${users.length} users`);
       })
     });
-  });
+});

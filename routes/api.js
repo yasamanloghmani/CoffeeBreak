@@ -3,8 +3,7 @@ var router = express.Router();
 const userCtrl = require('../controllers/api/users');
 const groupctrl = require('../controllers/api/groups');
 
-
-//users route
+//users routes
 router.get('/users', userCtrl.index);
 router.post('/users', userCtrl.create);
 router.get('/users/:id', userCtrl.show);
@@ -25,8 +24,6 @@ router.put('/groups/:id/posts/:postId', groupctrl.updatePost)
 router.delete('/groups/:id/posts/:postId', groupctrl.deletePost)
 router.get('/groups/:id/posts', groupctrl.allPosts);
 router.get('/groups/:id/posts/:postId', groupctrl.showPost)
-
-
 
 module.exports = router;
 

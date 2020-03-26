@@ -2,25 +2,32 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
 .navbar {
   margin-bottom: 30px;
   border-radius: 10px;
 }
+
 .bg-light {
   background-color: #e9e8f7!important;
 }
+
 .navbar-light .navbar-nav .nav-link {
   color: rgb(255, 119, 0);
   font-size: 20px;
 }
 
-.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:active {
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:active {
   color: rgb(15, 7, 97);
 }
+
 .list-group li{
   margin-bottom: 10px;
   border-radius: 5px;
 }
+
 li {
   display: flex;
   text-decoration: none;
@@ -35,6 +42,7 @@ li {
   z-index: 10;
   clear: both;
 }
+
 ul li .badge {
   color : white;
   padding: 7px;
@@ -46,7 +54,8 @@ ul li .badge {
 
 }
 
-li>p , li>h6{
+li>p ,
+li>h6 { 
   padding: 0px;
   margin: auto 10px;
   color: rgb(15, 7, 97);
@@ -55,6 +64,7 @@ li>p , li>h6{
 p {
   font-size: 15px;
 }
+
 h6 {
   font-size: 21px;
   font-weight: 500;
@@ -66,7 +76,6 @@ h6 {
   margin-bottom: 30px;
   padding-right: 20px;
   border-radius: 10px;
-
 }
 
 h3.badge {
@@ -75,13 +84,14 @@ h3.badge {
   text-align: left;
   padding : 20px;
 }
+
 h4.badge {
   font-size: 17px;
   text-align: left;
   padding : 20px;
 }
 
-.examples{
+.examples {
   display: none;
   background-color: #333;
   overflow: scroll;
@@ -92,10 +102,12 @@ h4.badge {
   box-shadow: inset 0 1px rgba(255,255,255,.17);
   color: white;
 }
-ul>div {
+
+ul > div {
   margin-bottom: 10px;
 }
-.examples>div{
+
+.examples > div {
   width: 800px;
   float: left;
   height: 500px;
@@ -107,50 +119,57 @@ ul>div {
   margin: 5px;
   padding: 10px;
 }
+
 .font {
   font-family: "Consolas";
 }
-.alert-info{
+
+.alert-info {
   font-size: 18px;
 }
 
-li>img {
+li > img {
   position: absolute;
   right: 20px;
   cursor: pointer;
   width: 28px;
 }
 
-h3>img{
+h3 > img{
   width: 24px;
   height: 24px;
 }
-#intro-paragraph{
+
+#intro-paragraph {
   font-size: 17px;
   padding: 0px 30px 10px 30px;
   line-height: 1.8;
 }
-.model{
+
+.model {
   width: 24%;
   margin: 10px;
   border-left: 1px solid #bdbcd5;
   box-shadow: -0.5px 0px 0px rgba(0, 0, 0, 0.17);
 }
 
-#models{
+#models {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-#models-card{
+
+#models-card {
   background-color: #e9e8f7;
   margin-bottom: 30px;
   padding-right: 20px;
   border-radius: 10px;
 }
-.red-flag{
+
+.red-flag {
   color: red;
 }
-.model>div{
+
+.model > div {
   margin-left: 20px;
 }
