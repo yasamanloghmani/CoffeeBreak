@@ -18,12 +18,21 @@
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="#users">Users</a>
           <a class="nav-item nav-link" href="#groups">Groups</a>
-          <a class="nav-item nav-link" href="#groups">Models</a>
+          <a class="nav-item nav-link" href="#models">Models</a>
         </div>
       </div>
     </nav>
+    <div class="card">
+      <h3 class="badge">
+        <img src="/images/icons8-rest-api-30.png">
+        Introduction</h3>
+      <p id="intro-paragraph">
+        Welcome to the CoffeeBreak API. The API allows you to do most common actions in CoffeeBreak APP. This includes  <b>create, read, update</b> and <b>delete</b>  operations for users, groups, coffees and enrollments.
+      </p>
+    </div>
     <div id="users" class="card">
       <h3 class="badge">
+        <img src="/images/icons8-user-24.png">
         Users
       </h3>
       <ul>
@@ -424,6 +433,7 @@
     </div>
     <div id="groups" class="card">
       <h3 class="badge">
+        <img src="/images/icons8-add-user-group-man-man-24.png">
         Groups
       </h3>
       <ul>
@@ -434,7 +444,43 @@
             <p>Index all groups</p>
             <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples" id="div-groups"></div>
+          <div class="examples" id="div-groups">
+            <div>
+              <p>
+                Get all the groups in the system.<br>Returns a JSON array.
+              </p>
+              <span class="font alert-info">
+                http://coffeebreak-app.herokuapp.com/api/groups
+              </span>
+
+            </div>
+            <div>
+              <span class="font">#sample response </span>
+              <span class="font">
+                [<br>
+                &nbsp;{<br>
+                  &nbsp;&nbsp;"users": [],<br>
+                  &nbsp;&nbsp;"_id": "5e7a576fa481a7dc69f8ac9f",<br>
+                  &nbsp;&nbsp;"name": "No to Coffee",<br>
+                  &nbsp;&nbsp;"post": [],<br>
+                  &nbsp;&nbsp;"createdAt": "2020-03-24T18:54:39.466Z",<br>
+                  &nbsp;&nbsp;"updatedAt": "2020-03-24T18:54:39.466Z",<br>
+                  &nbsp;&nbsp;"__v": 0<br>
+                  &nbsp;},<br>
+                  &nbsp;{<br>
+                    &nbsp;&nbsp;"users": [],<br>
+                    &nbsp;&nbsp;"_id": "5e7a576fa481a7dc69f8aca0",<br>
+                    &nbsp;&nbsp;"name": "Coffee & code",<br>
+                    &nbsp;&nbsp;"post": [],<br>
+                    &nbsp;&nbsp;"createdAt": "2020-03-24T18:54:39.466Z",<br>
+                    &nbsp;&nbsp;"updatedAt": "2020-03-24T18:54:39.466Z",<br>
+                    &nbsp;&nbsp;"__v": 0<br>
+                    &nbsp;},<br>
+                    ... <br>
+              ]<br>
+              </span>
+            </div>
+          </div>
         </div>
         <div>
           <li class="border-primary alert-primary" id="li-one-group">
@@ -443,7 +489,28 @@
             <p>Find group by Id</p>
             <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples" id="div-one-group"></div>
+          <div class="examples" id="div-one-group">
+            <div>
+              <p>
+                group's data can be retrieved using the API.
+              </p>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/groups/5e7a576fa481a7dc69f8aca0</span>
+            </div>
+            <div>
+              <span class="font">#sample response</span><br>
+              <span class="font">
+                {<br>
+                  &nbsp;"users": [],<br>
+                  &nbsp;"_id": "5e7a576fa481a7dc69f8aca0",<br>
+                  &nbsp;"name": "Coffee & code",<br>
+                  &nbsp;"post": [],<br>
+                  &nbsp;"createdAt": "2020-03-24T18:54:39.466Z",<br>
+                  &nbsp;"updatedAt": "2020-03-24T18:54:39.466Z",<br>
+                  &nbsp;"__v": 0<br>
+              }<br>
+              </span>
+            </div>
+          </div>
         </div>
         <div>
           <li class="border-success alert-success" id="li-create-group">
@@ -452,7 +519,36 @@
             <p>Creat new group</p>
             <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples" id="div-create-group"></div>
+          <div class="examples" id="div-create-group">
+            <div>
+              <p>
+                Group can be created through the API by passing in these parameters
+              </p>
+              <span class="font">- name</span><br><br><br>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/groups</span><br><br>
+              <span class="font">
+                {<br>
+                  &nbsp;"name" : "Quarantine"<br>
+                }<br>
+              </span>
+            </div>
+            <div>
+              <span class="font">
+                #sample response<br>
+              </span>
+              <span class="font">
+                {<br>
+                  &nbsp;"users": [],<br>
+                  &nbsp;"_id": "5e7c0901a421eb001716826f",<br>
+                  &nbsp;"name": "Quarantine",<br>
+                  &nbsp;"post": [],<br>
+                  &nbsp;"createdAt": "2020-03-26T01:44:33.919Z",<br>
+                  &nbsp;"updatedAt": "2020-03-26T01:44:33.919Z",<br>
+                  &nbsp;"__v": 0<br>
+              }<br>
+              </span>
+            </div>
+          </div>
         </div>       
         <div>
           <li class="border-warning alert-warning" id="li-update-group">
@@ -461,7 +557,35 @@
             <p>Update group</p>
             <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples" id="div-update-group"></div>
+          <div class="examples" id="div-update-group">
+            <div>
+              <p>groups can be updated through the API by passing in these parameters.</p>
+              <p>Note: parameters are the same as <span class="alert-danger">create</span> above</p>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/users/5e7b76550aa60e0017e8321e</span><br>
+              <br><span>+ Body Request :</span><br><br>
+              <span class="font">
+                {<br>
+	                &nbsp;"name" : "Quarantine1",<br>
+                }
+              </span>
+            </div>
+            <div>
+              <span class="font">
+                #sample response
+              </span><br>
+              <span class="font">
+                {<br>
+                  &nbsp;"users": [],<br>
+                  &nbsp;"_id": "5e7c0901a421eb001716826f",<br>
+                  &nbsp;"name": "Quarantine1",<br>
+                  &nbsp;"post": [],<br>
+                  &nbsp;"createdAt": "2020-03-26T01:44:33.919Z",<br>
+                  &nbsp;"updatedAt": "2020-03-26T01:59:57.202Z",<br>
+                  &nbsp;"__v": 0<br>
+              }<br>
+              </span>
+            </div>
+          </div>
         </div>        
         <div>
           <li class="border-danger alert-danger" id="li-delete-group">
@@ -519,6 +643,12 @@
         </div>
         
       </ul>
+    </div>
+    <div id="models" class="card">
+      <h3 class="badge">
+        <img src="/images/icons8-big-data-50.png">
+        Models
+      </h3>
     </div>
   </body>
 </html>
