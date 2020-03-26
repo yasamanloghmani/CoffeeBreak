@@ -76,7 +76,7 @@ h3.badge {
 }
 
 .examples{
-  display: flex;
+  display: none;
   background-color: #333;
   overflow: scroll;
   margin:0px 5px 5px 10px;

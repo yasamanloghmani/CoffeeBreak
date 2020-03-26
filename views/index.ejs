@@ -594,7 +594,26 @@
             <p>Delete group</p>
             <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples" id="div-delete-group"></div>
+          <div class="examples" id="div-delete-group">
+            <div>
+              <p>Deletes a group permanentely from the system.</p>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/groups/5e7c0901a421eb001716826f</span>
+            </div>
+            <div>
+              <span class="font">
+                #sample response<br>
+                {<br>
+                  &nbsp;"users": [],<br>
+                  &nbsp;"_id": "5e7c0901a421eb001716826f",<br>
+                  &nbsp;"name": "Quarantine1",<br>
+                  &nbsp;"post": [],<br>
+                  &nbsp;"createdAt": "2020-03-26T01:44:33.919Z",<br>
+                  &nbsp;"updatedAt": "2020-03-26T01:59:57.202Z",<br>
+                  &nbsp;"__v": 0<br>
+              }<br>
+              </span>
+            </div>
+          </div>
         </div>       
         <div>
           <li class="border-primary alert-primary" id="li-posts">
@@ -603,7 +622,28 @@
             <p>Show all posts of group </p>
             <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples" id="div-posts"></div>
+          <div class="examples" id="div-posts">
+            <div>
+              <p>
+                Get all the posts of the group in the system.
+              </p>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/groups/5e7a576fa481a7dc69f8ac9d/posts</span>
+            </div>
+            <div>
+              <span class="font">
+                #sample response<br>
+                [<br>
+                    &nbsp;{<br>
+                      &nbsp;&nbsp;"_id": "5e7cbb90965b540017f60141",<br>
+                      &nbsp;&nbsp;"user": "5e7a576fa481a7dc69f8aca4",<br>
+                      &nbsp;&nbsp;"content": "Many people drink too much coffee in the morning because they are thirsty. Drinking water first will quench your thirst and ensure you don’t skull down an extra large latte on your way to work.",<br>
+                      &nbsp;&nbsp;"createdAt": "2020-03-26T14:26:24.341Z",<br>
+                      &nbsp;&nbsp;"updatedAt": "2020-03-26T14:26:24.341Z"<br>
+                      &nbsp;}<br>
+                ]<br>
+              </span>
+            </div>
+          </div>
         </div>        
         <div>
           <li class="border-primary alert-primary" id="li-one-post">
@@ -612,7 +652,24 @@
             <p>Find a post of the group by Id</p>
             <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples" id="div-one-post"></div>
+          <div class="examples" id="div-one-post">
+            <div>
+              <p>Find post by Id</p>
+              <span class="forn alert-info">http://coffeebreak-app.herokuapp.com/api/groups/5e7a576fa481a7dc69f8ac9d/posts/5e7cbb90965b540017f60141</span>
+            </div>
+            <div>
+              <span class="font">
+                #sample response<br>
+                   {<br>
+                      &nbsp;"_id": "5e7cbb90965b540017f60141",<br>
+                      &nbsp;"user": "5e7a576fa481a7dc69f8aca4",<br>
+                      &nbsp;"content": "Many people drink too much coffee in the morning because they are thirsty. Drinking water first will quench your thirst and ensure you don’t skull down an extra large latte on your way to work.",<br>
+                      &nbsp;"createdAt": "2020-03-26T14:26:24.341Z",<br>
+                      &nbsp;"updatedAt": "2020-03-26T14:26:24.341Z"<br>
+                      }<br>
+              </span>
+            </div>
+          </div>
         </div>       
         <div>
           <li class="border-success alert-success" id="li-create-post">
@@ -621,7 +678,43 @@
             <p>Create new post</p>
             <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples" id="div-create-post"></div>
+          <div class="examples" id="div-create-post">
+            <div>
+              <p> Each users of groups can post some data(content and pictures)</p>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/groups/5e7a576fa481a7dc69f8ac9d/posts</span>
+              <span class="font">
+                <br><br>+Body Request<br>
+                {<br>
+                  &nbsp;"user" : "5e7a576fa481a7dc69f8aca4",<br>
+                  &nbsp;"content" : "Many people drink too much coffee in the morning because they are thirsty.<br>&nbsp; Drinking water first will quench your thirst and ensure you don’t skull down an extra large latte<br>&nbsp; on your way to work."<br>
+                }<br>
+              </span>
+            </div>
+            <div>
+              <span class="font">
+                #sample response<br>
+                {<br>
+                  &nbsp;"users": [<br>
+                  &nbsp;&nbsp;"5e7a576fa481a7dc69f8aca4"<br>
+                  &nbsp;],<br>
+                  &nbsp;"_id": "5e7a576fa481a7dc69f8ac9d",<br>
+                  &nbsp;"name": "Water",<br>
+                  &nbsp;"post": [<br>
+                  &nbsp;&nbsp;{<br>
+                    &nbsp;&nbsp;&nbsp;"_id": "5e7cbb90965b540017f60141",<br>
+                    &nbsp;&nbsp;&nbsp;"user": "5e7a576fa481a7dc69f8aca4",<br>
+                    &nbsp;&nbsp;&nbsp;"content": "Many people drink too much coffee in the morning because they are thirsty. Drinking <br>&nbsp;&nbsp;&nbsp; water first will quench your thirst and ensure you don’t skull down an extra large latte on your<br>&nbsp;&nbsp;&nbsp; way to work.",<br>
+                    &nbsp;&nbsp;&nbsp;"createdAt": "2020-03-26T14:26:24.341Z",<br>
+                    &nbsp;&nbsp;&nbsp;"updatedAt": "2020-03-26T14:26:24.341Z"<br>
+                    &nbsp;&nbsp;}<br>
+                    &nbsp;],<br>
+                    &nbsp;"createdAt": "2020-03-24T18:54:39.466Z",<br>
+                    &nbsp;"updatedAt": "2020-03-26T14:26:24.342Z",<br>
+                    &nbsp;"__v": 2<br>
+              }<br>
+              </span>
+            </div>
+          </div>
         </div>      
         <div>
           <li class="border-warning alert-warning" id="li-update-post">
@@ -630,7 +723,42 @@
             <p>Update the content of the post</p>
             <img src="/images/baseline_unfold_more_black_18dp.png">          
           </li>
-          <div class="examples" id="div-update-post"></div>
+          <div class="examples" id="div-update-post">
+            <div>
+              <p>posts can be updated through the API by passing in these parameters.</p>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/groups/5e7a576fa481a7dc69f8ac9d/posts/5e7cbb90965b540017f60141</span><br><br>
+              <span class="font">
+                + Body Request <br>
+                {<br>
+                  &nbsp;"content" : "Your body is dehydrated after fasting all night and coffee is a diuretic. This means it stimulates the kidneys to excrete more sodium into the urine."<br>
+                }<br>
+              </span>
+            </div>
+            <div>
+              <span class="font">
+                #sample response<br>
+                {<br>
+                  &nbsp;"users": [<br>
+                  &nbsp;&nbsp;"5e7a576fa481a7dc69f8aca4"<br>
+                  &nbsp;],<br>
+                  &nbsp;"_id": "5e7a576fa481a7dc69f8ac9d",<br>
+                  &nbsp;"name": "Water",<br>
+                  &nbsp;"post": [<br>
+                  &nbsp;&nbsp;{<br>
+                    &nbsp;&nbsp;&nbsp;"_id": "5e7cbb90965b540017f60141",<br>
+                    &nbsp;&nbsp;&nbsp;"user": "5e7a576fa481a7dc69f8aca4",<br>
+                    &nbsp;&nbsp;&nbsp;"content": "Your body is dehydrated after fasting all night and coffee is a diuretic. This means it stimulates the kidneys to excrete more sodium into the urine.",<br>
+                    &nbsp;&nbsp;&nbsp;"createdAt": "2020-03-26T14:26:24.341Z",<br>
+                    &nbsp;&nbsp;&nbsp;"updatedAt": "2020-03-26T15:02:08.612Z"<br>
+                    &nbsp;&nbsp;}<br>
+                    &nbsp;],<br>
+                    &nbsp;"createdAt": "2020-03-24T18:54:39.466Z",<br>
+                    &nbsp;"updatedAt": "2020-03-26T15:02:08.613Z",<br>
+                    &nbsp;"__v": 2<br>
+              }<br>
+              </span>
+            </div>
+          </div>
         </div>      
         <div>
           <li class="border-danger alert-danger" id="li-delete-post">
@@ -639,7 +767,28 @@
             <p>Delete a post</p>
             <img src="/images/baseline_unfold_more_black_18dp.png">
           </li>
-          <div class="examples" id="div-delete-post"></div>
+          <div class="examples" id="div-delete-post">
+            <div>
+              <p>Usres can delete their post from groups</p>
+              <span class="font alert-info">http://coffeebreak-app.herokuapp.com/api/groups/5e7a576fa481a7dc69f8ac9d/posts/5e7cbb90965b540017f60141</span>
+            </div>
+            <div>
+              <span class="font">
+                #sample response<br>
+                {<br>
+                  &nbsp;"users": [<br>
+                  &nbsp;&nbsp;"5e7a576fa481a7dc69f8aca4"<br>
+                  &nbsp;],<br>
+                  &nbsp;"_id": "5e7a576fa481a7dc69f8ac9d",<br>
+                  &nbsp;"name": "Water",<br>
+                  &nbsp;"post": [],<br>
+                  &nbsp;"createdAt": "2020-03-24T18:54:39.466Z",<br>
+                  &nbsp;"updatedAt": "2020-03-26T15:13:20.646Z",<br>
+                  &nbsp;"__v": 3<br>
+              }<br>
+              </span>
+            </div>
+          </div>
         </div>
         
       </ul>
