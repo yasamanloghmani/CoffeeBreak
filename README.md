@@ -1,6 +1,6 @@
-<h1><a href="http://coffeebreak-app.herokuapp.com/api/">CoffeBreak</a></h1>
+<h1><a href="https://coffeebreakapi.herokuapp.com/api">CoffeBreak</a></h1>
 
-* [CoffeBreak](http://coffeebreak-app.herokuapp.com/api/)
+* [CoffeBreak](https://coffeebreakapi.herokuapp.com/api)
 
 * Summary:
   * Database - MongoDB (no SQL database)
@@ -14,7 +14,7 @@
 [Go Back to Summary](#summary)
 
 * Full MEN stack CRUD application built with RESTful routing and MVC architecture. 
-* [CoffeeBreak](http://coffeebreak-app.herokuapp.com/api/) cares about your health and daily expenses. 
+* [CoffeeBreak](https://coffeebreakapi.herokuapp.com/api) cares about your health and daily expenses. 
 
 <h1 id='summary'>Summary</h1>
 
@@ -50,7 +50,7 @@
 
 [Go Back to Summary](#summary)
 
-* Access [CoffeeBreak](http://coffeebreak-app.herokuapp.com/api/)
+* Access [CoffeeBreak](https://coffeebreakapi.herokuapp.com/api)
 
 
 <img width="40%" height="50%" alt="Getting Started" src="./public/images/IMG_5483.png"><img width="40%" height="50%" alt="Getting Started" src="./public/images/IMG_5484.png">
